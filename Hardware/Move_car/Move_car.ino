@@ -49,8 +49,8 @@ void right() {
   digitalWrite(BIN2, HIGH);
 }
 void stop() {
-  analogWrite(PWMA, 0);
-  analogWrite(PWMB, 0);
+  analogWrite(PWMA, _ );
+  analogWrite(PWMB, _ ); //Que valores tendrian los motores para que paren ?
   digitalWrite(AIN1, LOW);
   digitalWrite(AIN2, LOW);
   digitalWrite(BIN1, LOW);
@@ -90,15 +90,10 @@ void loop()
         case 'G':
             forward();
             break;
-        case 'H':
+        case '_':
             backward();
             break;
-        case 'I':
-            left();
-            break;
-        case 'J':
-            right();
-            break;
+          //Movimiento para izquierda y derecha ???
         case 'K':
             stop();
             break;
